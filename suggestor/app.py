@@ -1,37 +1,28 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
-from .models import DB, Song
 import joblib
 
-model = joblib.load('model.joblib')
+#model = joblib.load('model.joblib')
 
-def create_app():
-    app = Flask(__name__)
-    app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///db.sqlite3'
-    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-    DB.init_app(app)
+app = Flask(__name__)
 
-
-    @app.route("/", methods = ["GET", "POST"])
-    def main_page():
-        """Asks user for their name
-            and returns personalized welcome message
-            before moving to song input.
-        """
-        if request.method == "GET":
-            return "Welcome! What's your hame? []" # user name inserted here
-        if request.method == "POST":
-            return "Hi, [Name], let's find some new music."
+@app.route("/", methods = ["GET", "POST"])
+def main_page():
+    """Asks user for their name
+    and returns personalized welcome message
+    before moving to song input.
+    """
+    if request.method == "GET":
+        return render_template('home.html')
+    if request.method == "POST":
+        return render_template('greet.html', name=request.form.get("name", "you"))
     
+@app.route("/music", methods = ["GET", "POST"]) 
+def input(): 
+    return render_template("input_song.html", song=request.form.get("input_song"))
 
-    @app.route("/music")
-    def music():
-        return 'Hello World!'
+    # @app.route("/music")
+    # # inputs favorite song
 
-
-    @app.route("/recommended")
-    # returns recommended songs
-    def recommended():
-        pass
-
-    return app
+    # @app.route("/recommended")
+    # # returns recommended songs
