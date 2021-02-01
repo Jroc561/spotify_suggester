@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from .models import DB, Song
+import joblib
 
+model = joblib.load('model.joblib')
 
 def create_app():
     app = Flask(__name__)
