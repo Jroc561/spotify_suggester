@@ -4,7 +4,7 @@ from .models import song_model
 import joblib
 
 #model = joblib.load('model.joblib')
-df = pd.read_csv('data/edited_data.csv')
+df = pd.read_csv('edited_data.csv')
 
 
 def create_app():
@@ -23,13 +23,19 @@ def create_app():
         
     @app.route("/music", methods = ["GET", "POST"]) 
     def input():
-        input = request.form.get("input_song")
-        index = df.loc[df.isin([input]).any(axis=1)].index.tolist()
-        index = index[0]
-        model = song_model(index)
-        print(model) 
-        return render_template("input_song.html", song=request.form.get("input_song"))
-
+        if request.method == "GET":
+            return render_template('input_song.html')
+        
+        # return render_template("input_song.html", song=request.form.get("input_song"))
+        if request.method == "POST":
+            input = request.form.get("input_song")
+            index = df.loc[df.isin([input]).any(axis=1)].index.tolist()
+            index = index[0]
+            model = song_model(index)
+            # first = model[0]
+            # second = model[1]
+            return render_template('output_song.html', output_song=input, recommended_song=model)
+                                   #recommended_song_1=first,recommended_song_2=second)
         # @app.route("/music")
         # # inputs favorite song
 
