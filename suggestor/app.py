@@ -4,8 +4,8 @@ from .models import song_model
 
 
 
-df = pd.read_csv('suggestor/edited_data.csv')
-
+df = pd.read_csv('edited_data.csv')
+names_list = ["A", "B", "C"]
 
 def create_app():
     app = Flask(__name__)
@@ -36,11 +36,6 @@ def create_app():
             # second = model[1]
             return render_template('output_song.html', output_song=input, recommended_song=model)
                                    #recommended_song_1=first,recommended_song_2=second)
-        # @app.route("/music")
-        # # inputs favorite song
-
-        # @app.route("/recommended")
-        # # returns recommended songs
     
     return app
 
