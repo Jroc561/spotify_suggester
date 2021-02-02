@@ -1,12 +1,11 @@
 import pandas as pd
 import numpy as np
-from joblib import dump
 from sklearn.neighbors import NearestNeighbors
-from joblib import dump
+
 
 
 def song_model(input):
-    df = pd.read_csv('edited_data.csv')
+    df = pd.read_csv('suggestor/edited_data.csv')
     # adding direct url to data set by adding url prefix and id
     url = 'http://open.spotify.com/track/' + df['id']
     df['url'] = url

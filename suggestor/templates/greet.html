@@ -1,10 +1,21 @@
-{% extends "base.html" %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/entry.css') }}"/>
+</head>
 
-{% block body %}
+<div class="login">
+    <div class="login-screen">
+      <div class="login-form">
+        <div class="control-group">  
 
-    <h1>Hi, {{ name }}!</h1>
+<h1>Hi, {{ name }}!</h1>
     <p>Let's find you some new music.</p>
-    <a href="/music"><input type=”button” value="Let's get started!"></a> 
+    <a href="/music"><input type=”button” name='search' value="Let's get started!"></input></a> 
 </script>
-
-{% endblock %}
+        </div>
+      </div>
+    </div>
+</div>
+</html>

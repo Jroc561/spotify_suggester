@@ -1,10 +1,10 @@
 import pandas as pd
 from flask import Flask, render_template, request
 from .models import song_model
-import joblib
 
-#model = joblib.load('model.joblib')
-df = pd.read_csv('edited_data.csv')
+
+
+df = pd.read_csv('suggestor/edited_data.csv')
 
 
 def create_app():

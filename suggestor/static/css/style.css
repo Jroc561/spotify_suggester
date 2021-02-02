@@ -1,0 +1,139 @@
+body {
+    height: 100%;
+    background-image: url('/static/images/pexels-aleksandar-pasaric-325185.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #a1dbbb;
+    margin:auto;
+    padding: 0;
+  }
+  h2 {
+    font-family: Tahoma;
+    font-size: 1.5em;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    text-align: left;
+    letter-spacing: -2px;
+  }
+  h3 {
+    font-family: Tahoma;
+    font-weight: lighter;
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #999;
+  }
+  h4 {
+    font-size: 1em;
+    font-weight: 100;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: rgb(0, 0, 0);
+  }
+  p {
+    font-family: Tahoma;
+    width: auto;
+    margin: 5px auto;
+    word-wrap: break-word;
+  }
+  p.footer {
+    font-family: Tahoma;
+    font-size: .7em;
+    text-align: center;
+    width: auto;
+    word-wrap: break-word;
+  }
+  .login {
+    margin: 10px auto;
+    margin-top: 125px;
+    width: 1000px;
+  }
+  .login-screen {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  .login-form {
+    text-align: center;
+  }
+  .control-group {
+    margin-bottom: 10px;
+  }
+  .form-group {
+    padding: 1px;
+    width: 100px;
+  }
+  .form-control {
+    height: 130px;
+    width: 350px;
+    font-size: .9em;
+  }
+  .input_song {
+    height: 130px;
+    width: 350px;
+    font-size: .9em;
+  }
+  
+  /*
+  * Formatting the header area
+  */
+  header {
+    background-color: #ffffff;
+    height: 35px;
+    width: 100%;
+    opacity: 0.9;
+    padding: 0px;
+  }
+  header h1.logo {
+    font-family: 'Times New Roman';
+    font-weight: lighter;
+    font-size: 1.7em;
+    color: rgb(0, 0, 0);
+    float: left;
+  }
+  header h1.logo:hover {
+    font-family: 'Times New Roman';
+    color: #fff;
+    text-decoration: none;
+  }
+  p {
+    width: auto;
+    margin: 5px auto;
+    word-wrap: break-word;
+  }
+  .menu {
+    float: right;
+    margin-top: 10px;
+    margin-right: 30px;
+  }
+  .menu a {
+    font-family: 'Times New Roman';
+    font-weight: lighter;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: inline;
+  }
+  .menu a + a {
+    margin-left: 35px;
+  }
+  
+  /*
+  * Splits homepage into two sections
+  */
+  #container {
+    display: flex;
+  }
+  #container section {
+    padding: 0px;
+  }
+  .indent-1 {
+    width: 50%;
+  }
+  .indent-2 {
+    width: 50%;
+  }
