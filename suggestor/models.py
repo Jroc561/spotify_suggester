@@ -5,7 +5,7 @@ from sklearn.neighbors import NearestNeighbors
 
 
 def song_model(input):
-    df = pd.read_csv('suggestor/edited_data.csv')
+    df = pd.read_csv('edited_data.csv')
     # adding direct url to data set by adding url prefix and id
     url = 'http://open.spotify.com/track/' + df['id']
     df['url'] = url

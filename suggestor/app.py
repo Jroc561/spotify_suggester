@@ -4,7 +4,7 @@ from .models import song_model
 
 
 
-df = pd.read_csv('suggestor/edited_data.csv')
+df = pd.read_csv('edited_data.csv')
 
 
 def create_app():
