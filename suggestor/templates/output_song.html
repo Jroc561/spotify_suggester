@@ -12,7 +12,7 @@
         {% for index, row in recommended_song.iterrows() %}
         <tr>
             <td>{{ row['combined'] }}</td>
-            <td><button><a href="{{ row['url'] }}" style = "text-decoration: none">Listen Here</a></button></td>
+            <td><a href="{{ row['url'] }}" class="myButton">Listen Here</a></td>
         </tr>
         {% endfor %}
 
