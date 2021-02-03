@@ -115,7 +115,7 @@
         }
         
         /*An array containing all the song names in our model:*/
-        var songs = ['Keep A Song In Your Soul', 'I Put A Spell On You', 'Golfing Papa', 'Keep Your Eyes Open']
+        var songs = {{ data|tojson|safe }};
         autocomplete(document.getElementById("in_song"), songs);
         </script>
 

@@ -4,7 +4,7 @@ from .models import song_model
 
 
 
-df = pd.read_csv('edited_data.csv')
+df = pd.read_csv('suggestor/edited_data.csv')
 names_list = ["A", "B", "C"]
 
 def create_app():
@@ -24,7 +24,9 @@ def create_app():
     @app.route("/music", methods = ["GET", "POST"]) 
     def input():
         if request.method == "GET":
-            return render_template('input_song.html')
+            combined = df['name'] + ' - ' +  df['artists']
+            track_artist = combined.tolist()
+            return render_template('input_song.html', data=track_artist)
         
         # return render_template("input_song.html", song=request.form.get("input_song"))
         if request.method == "POST":
