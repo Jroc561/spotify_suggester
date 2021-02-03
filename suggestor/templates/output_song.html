@@ -7,14 +7,13 @@
     <table>
         <tr>
             <th>Track</th>
-            <th>Artist</th>
             <th></th>
         </tr>
         {% for index, row in recommended_song.iterrows() %}
         <tr>
-            <td>{{ row['name'] }}</td>
-            <td>{{ row['artists'] }}</td>
-            <td><button><a href="{{ row['url'] }}" style = "text-decoration: none">Listen Here</a></button></td>
+            <td>{{ row['combined'] }}</td>
+            <td><a href="{{ row['url'] }}" class="myButton">Listen Here</a></td>
         </tr>
         {% endfor %}
+
 {% endblock %}

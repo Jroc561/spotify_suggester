@@ -5,7 +5,10 @@ from sklearn.neighbors import NearestNeighbors
 
 
 def song_model(input):
-    df = pd.read_csv('edited_data.csv')
+    """
+    Nearest Neighbors Model for song suggestions
+    """
+    df = pd.read_csv('suggestor/edited_data.csv')
     # adding direct url to data set by adding url prefix and id
     url = 'http://open.spotify.com/track/' + df['id']
     df['url'] = url
@@ -48,6 +51,9 @@ def song_model(input):
     return (output)
 
 def to_list(df):
+    """
+    Create list of track & artists
+    """
     df['combined'] = df['name'] + ' - ' +  df['artists']
     df = df.drop_duplicates(subset='combined', keep='first')
     combined = df['combined']

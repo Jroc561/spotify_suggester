@@ -3,7 +3,6 @@ from flask import Flask, render_template, request
 from .models import song_model, to_list
 
 
-
 df = pd.read_csv('suggestor/edited_data.csv')
 names_list = ["A", "B", "C"]
 
@@ -12,9 +11,10 @@ def create_app():
 
     @app.route("/", methods = ["GET", "POST"])
     def main_page():
-        """Asks user for their name
-        and returns personalized welcome message
-        before moving to song input.
+        """
+        1. Asks user for their name.
+        2. Returns personalized welcome message.
+        3. Moves user to song input.
         """
         if request.method == "GET":
             return render_template('home.html')
@@ -23,18 +23,19 @@ def create_app():
         
     @app.route("/music", methods = ["GET", "POST"]) 
     def input():
+        """ 
+        Input user's favorite song.
+        Return list of recommended songs.
+        """
         if request.method == "GET":
             track_artist = to_list(df)
             return render_template('input_song.html', data=track_artist)
         
-        # return render_template("input_song.html", song=request.form.get("input_song"))
         if request.method == "POST":
             input = request.form.get("input_song")
             index = df.loc[df.isin([input]).any(axis=1)].index.tolist()
             index = index[0]
             model = song_model(index)
-            # first = model[0]
-            # second = model[1]
             return render_template('output_song.html', output_song=input, recommended_song=model)
                                    #recommended_song_1=first,recommended_song_2=second)
     
