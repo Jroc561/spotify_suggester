@@ -1,8 +1,104 @@
 {% extends "base.html" %} {% block body %}
 
-    <h1>Hi, {{ name }}!</h1>
-    <p>Let's find you some new music.</p>
-    <a href="/input"><input type=”button” value="Let's get started!"></a> 
-</script>
+<body id="home">
+
+            <div>
+                <div>
+                    <h1>Spotify</h1>
+                    <p>This project generates a list of song recommendations based on a song. The dataset we chose is a collection of 160,000+ tracks on Spotify, found on <a href="https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks">Kaggle</a>.</p>
+                    <h2>Model</h2>
+                    <h3>Input</h3>
+                    <p>Our input is a song selected from a list. Our model analyzes the song based on these categories:</p>
+                    <ul>
+                    	<li>acousticness</li>
+                        <li>danceability</li>
+                        <li>energy</li>
+                        <li>explicitness</li>
+                        <li>instrumentalness</li>
+                        <li>liveliness</li>
+                        <li>key</li>
+                        <li>loudness</li>
+                        <li>mode</li>
+                        <li>popularity</li>
+                        <li>speechiness</li>
+                        <li>tempo</li>
+                        <li>valence</li>
+                        
+                    </ul>
+                    <h3>Output</h3>
+                    <p>After a model analysis, the output of the model is a list of recommendations that are similar to the input song that a listener might like.</p>
+ 
+
+                </div>
+            </div>
+        </div>
+    </section><!--/#about-->
+<section id="hero-action-section">
+		<!-- .Container -->
+</section>
+
+<section id="our-team">
+        <div>
+            <div>
+                <h1>Our team</h1>
+                <p>Data Science Students</p> 
+            </div>
+            <div>
+                <div>
+                    <div data-wow-duration="400ms" data-wow-delay="0ms">
+                        <div>image here
+                            <img src="" alt="">
+                        </div>
+                        <div>
+                            <h3>Josh Carlisle</h3>
+                        </div> 
+                        <ul class="no-bullets">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div data-wow-duration="400ms" data-wow-delay="0ms">
+                        <div>image here
+                            <img src="" alt="">
+                        </div>
+                        <div>
+                            <h3>Jen Faith</h3>
+                        </div> 
+                        <ul class="no-bullets">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div data-wow-duration="400ms" data-wow-delay="0ms">
+                        <div>image here
+                            <img src="" alt="">
+                        </div>
+                        <div>
+                            <h3>Joan Villar</h3>
+                        </div> 
+                        <ul class="no-bullets">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#our-team-->
+
+    <footer>
+        <div>
+            <div>
+                <div>
+                    &copy; 2020 Spotify Suggestor
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+</body>
+</html>
 
 {% endblock %}

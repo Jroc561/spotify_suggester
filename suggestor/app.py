@@ -1,11 +1,11 @@
 import pandas as pd
 from flask import Flask, render_template, request
-from .models import song_model
+from .models import song_model, to_list
 
 
 
-df = pd.read_csv('edited_data.csv')
-
+df = pd.read_csv('suggestor/edited_data.csv')
+names_list = ["A", "B", "C"]
 
 def create_app():
     app = Flask(__name__)
@@ -24,7 +24,8 @@ def create_app():
     @app.route("/music", methods = ["GET", "POST"]) 
     def input():
         if request.method == "GET":
-            return render_template('input_song.html')
+            track_artist = to_list(df)
+            return render_template('input_song.html', data=track_artist)
         
         # return render_template("input_song.html", song=request.form.get("input_song"))
         if request.method == "POST":
@@ -36,11 +37,6 @@ def create_app():
             # second = model[1]
             return render_template('output_song.html', output_song=input, recommended_song=model)
                                    #recommended_song_1=first,recommended_song_2=second)
-        # @app.route("/music")
-        # # inputs favorite song
-
-        # @app.route("/recommended")
-        # # returns recommended songs
     
     return app
 
