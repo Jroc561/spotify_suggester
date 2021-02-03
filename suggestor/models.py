@@ -9,14 +9,21 @@ def song_model(input):
     # adding direct url to data set by adding url prefix and id
     url = 'http://open.spotify.com/track/' + df['id']
     df['url'] = url
+
+    # creating combined column just incase we find ourselves with mutiple tracks 
+    #named the same but from different artist
+    df['combined'] = df['name'] + ' - ' +  df['artists']
+
+    # dropping duplicates for different versions of the same song
+    df = df.drop_duplicates(subset='combined', keep='first')
     
     # reordering columns, leaving out ID and release date
-    df = df[['artists',  'name', 'url', 'year', 'acousticness', 'danceability', 'duration_ms', 'energy',
+    df = df[['combined', 'url', 'year', 'acousticness', 'danceability', 'duration_ms', 'energy',
        'explicit', 'instrumentalness', 'key', 'liveness', 'loudness',
        'mode', 'popularity', 'speechiness', 'tempo', 'valence']]
     
    # target set will be both artist and name
-    y_set = ['artists', 'name', 'url']
+    y_set = ['combined', 'url']
 
     # droping target from data matrix
     df_data = df.drop(y_set, axis=1)
@@ -39,3 +46,10 @@ def song_model(input):
     #adding url to each track
     output = df_target.iloc[indexs]
     return (output)
+
+def to_list(df):
+    df['combined'] = df['name'] + ' - ' +  df['artists']
+    df = df.drop_duplicates(subset='combined', keep='first')
+    combined = df['combined']
+    track_artist = combined.tolist()
+    return track_artist

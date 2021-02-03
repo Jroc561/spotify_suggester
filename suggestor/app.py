@@ -1,6 +1,6 @@
 import pandas as pd
 from flask import Flask, render_template, request
-from .models import song_model
+from .models import song_model, to_list
 
 
 
@@ -24,8 +24,7 @@ def create_app():
     @app.route("/music", methods = ["GET", "POST"]) 
     def input():
         if request.method == "GET":
-            combined = df['name'] + ' - ' +  df['artists']
-            track_artist = combined.tolist()
+            track_artist = to_list(df)
             return render_template('input_song.html', data=track_artist)
         
         # return render_template("input_song.html", song=request.form.get("input_song"))
