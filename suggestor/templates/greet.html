@@ -2,20 +2,16 @@
   <head>
     <meta charset="UTF-8" />
     <title>{{ title }}</title>
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/entry.css') }}"/>
-</head>
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/entry.css') }}"/>
+  </head>
 
-<div class="login">
+  <div class="login">
     <div class="login-screen">
       <div class="login-form">
-
-
-<h1>Hi, {{ name }}!</h1>
-    <p>Let's find you some new music.</p>
-    <a href="/music"><input type='submit' name='search' value="Let's get started!"></input></a> 
-</script>
-
+        <h1>Hi, {{ name }}!</h1>
+        <p>Let's find you some new music.</p>
+        <a href="/music"><input type='submit' name='search' value="Let's get started!"></input></a> 
       </div>
     </div>
-</div>
+  </div>
 </html>
