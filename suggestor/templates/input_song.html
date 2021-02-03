@@ -3,12 +3,12 @@
     <h1>What's your favorite song right now?</h1>
    
     <!--Make sure the form has the autocomplete function switched off:-->
-    <form autocomplete="off" action="/music" method="post">
-        <div class="autocomplete" style="width:400px;">
-            <input id="in_song" type="text" name="input_song" placeholder="Song Title">
-        </div>
-        <input type="submit">
-        </form>
+    <form id='songsubmit' autocomplete="off" action="/music" method="post">
+      <div class="autocomplete" style="width:400px;">
+        <input id="in_song" type="text" name="input_song" placeholder="Song Title"></input>
+        <input type="submit" name='submit'></input>
+      </div>
+    </form>
         
         <script>
         function autocomplete(inp, arr) {
