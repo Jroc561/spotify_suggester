@@ -4,7 +4,7 @@ from .models import song_model, to_list
 
 
 df = pd.read_csv('suggestor/edited_data.csv')
-
+names_list = ["A", "B", "C"]
 
 def create_app():
     app = Flask(__name__)
