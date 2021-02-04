@@ -11,6 +11,7 @@ body {
   }
   .autocomplete {
     /*the container must be positioned relative:*/
+    font-family: 'Open Sans', sans-serif;
     position: relative;
     display: inline-block;
   }
@@ -21,6 +22,7 @@ body {
   }
   input[type='text'] {
     background-color: #f1f1f1;
+    font-family: 'Open Sans', sans-serif;
     width: 100%;
   }
   input[type='submit'] {
