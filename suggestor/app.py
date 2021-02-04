@@ -3,8 +3,7 @@ from flask import Flask, render_template, request
 from .models import song_model, to_list
 
 
-df = pd.read_csv('edited_data.csv')
-names_list = ["A", "B", "C"]
+df = pd.read_csv('edited_data_v2.csv')
 
 def create_app():
     app = Flask(__name__)
@@ -37,7 +36,5 @@ def create_app():
             index = index[0]
             model = song_model(index)
             return render_template('output_song.html', output_song=input, recommended_song=model)
-                                   #recommended_song_1=first,recommended_song_2=second)
     
     return app
-

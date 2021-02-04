@@ -8,17 +8,10 @@ def song_model(input):
     """
     Nearest Neighbors Model for song suggestions
     """
-    df = pd.read_csv('edited_data.csv')
+    df = pd.read_csv('edited_data_v2.csv')
     # adding direct url to data set by adding url prefix and id
     url = 'http://open.spotify.com/track/' + df['id']
     df['url'] = url
-
-    # creating combined column just incase we find ourselves with mutiple tracks 
-    #named the same but from different artist
-    df['combined'] = df['name'] + ' - ' +  df['artists']
-
-    # dropping duplicates for different versions of the same song
-    df = df.drop_duplicates(subset='combined', keep='first').reset_index()
     
     # reordering columns, leaving out ID and release date
     df = df[['combined', 'url', 'year', 'acousticness', 'danceability', 'duration_ms', 'energy',
@@ -54,8 +47,6 @@ def to_list(df):
     """
     Create list of track & artists
     """
-    df['combined'] = df['name'] + ' - ' +  df['artists']
-    df = df.drop_duplicates(subset='combined', keep='first').reset_index()
     combined = df['combined']
     track_artist = combined.tolist()
     return track_artist
