@@ -28,7 +28,7 @@ def song_model(input):
     df_target = df[y_set]
 
     # fit on data, 12 neighbors
-    nn = NearestNeighbors(algorithm='brute', leaf_size =15, n_neighbors=12, n_jobs=-1)
+    nn = NearestNeighbors(algorithm='brute', metric='cosine', leaf_size =15, n_neighbors=12, n_jobs=-1)
     nn.fit(df_data)
 
     # sample a song(index) from df_data to use as our query point 
