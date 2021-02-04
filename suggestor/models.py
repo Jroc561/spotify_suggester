@@ -18,7 +18,7 @@ def song_model(input):
     df['combined'] = df['name'] + ' - ' +  df['artists']
 
     # dropping duplicates for different versions of the same song
-    df = df.drop_duplicates(subset='combined', keep='first')
+    df = df.drop_duplicates(subset='combined', keep='first').reset_index()
     
     # reordering columns, leaving out ID and release date
     df = df[['combined', 'url', 'year', 'acousticness', 'danceability', 'duration_ms', 'energy',
@@ -55,7 +55,7 @@ def to_list(df):
     Create list of track & artists
     """
     df['combined'] = df['name'] + ' - ' +  df['artists']
-    df = df.drop_duplicates(subset='combined', keep='first')
+    df = df.drop_duplicates(subset='combined', keep='first').reset_index()
     combined = df['combined']
     track_artist = combined.tolist()
     return track_artist
