@@ -10,6 +10,7 @@ scikit-learn = "*"
 flask = "*"
 flask-sqlalchemy = "*"
 jinja2 = "*"
+jupyter = "*"
 
 [dev-packages]
 
