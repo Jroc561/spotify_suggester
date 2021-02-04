@@ -17,17 +17,30 @@ body {
   }
   input {
     border: 1px solid transparent;
-    padding: 10px;
     font-size: 16px;
   }
   input[type='text'] {
-    background-color: #f1f1f1;
-    font-family: 'Open Sans', sans-serif;
-    width: 100%;
+    width: 400px;
+    height: 30px;
+    border:1px solid #ccc; 
+    -webkit-border-radius: 5px;
+    color: rgb(0, 0, 0);
+    border-radius: 5px; 
   }
   input[type='submit'] {
-    background-color: DodgerBlue;
-    color: #fff;
+    box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+    background-color:#007dc1;
+    border-radius:3px;
+    border:1px solid #124d77;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+
+    text-decoration:none;
+    text-shadow:0px 1px 0px #154682;
   }
   .autocomplete-items {
     position: absolute;
@@ -43,7 +56,8 @@ body {
   .autocomplete-items div {
     padding: 10px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.90); 
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid #d4d4d4;
   }
   .autocomplete-items div:hover {
@@ -97,8 +111,8 @@ body {
     border-radius: 5px;
     text-align: center;
     margin: 50px auto;
-    margin-top: 225px;
-    width: 750px;
+    margin-top: 150px;
+    width: 700px;
     box-shadow: 5px 5px 10px;
   }
   .songsubmit {
@@ -169,10 +183,6 @@ body {
     text-decoration: none;
     display: inline;
   }
-  img {
-    width: 100%;
-    height: auto;
-    }
   table {
     width: 100%;
     border-collapse: collapse;
