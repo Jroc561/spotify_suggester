@@ -57,23 +57,30 @@ body {
   }
   h1 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.5em;
-    margin-top: 40px;
-    margin-bottom: 15px;
+    font-size: 1.5em; 
+    font-weight: 900;
+    margin-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding: 1px;
     text-align: center;
-    letter-spacing: -2px;
+    color: rgb(0, 97, 167);
   }
   h2 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.5em;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    font-size: 1.2em; 
+    font-weight: lighter;
+    margin-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    padding: 1px;
     text-align: center;
-    letter-spacing: -2px;
+    color: rgb(0, 0, 0);
   }
   h3 {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.1em;
+    font-weight: light;
     margin-top: 15px;
     margin-bottom: 15px;
     text-align: left;
@@ -84,7 +91,7 @@ body {
     word-wrap: break-word;
   }
   .login {
-    background-color: rgba(255, 255, 255, 0.50); 
+    background-color: rgba(255, 255, 255, 0.70); 
     backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 5px;
@@ -146,21 +153,26 @@ body {
     height: 35px;
     width: 100%;
     opacity: 0.9;
-    padding: 0px;
+    padding: 25px 0px 75px 0px;
   }
   .menu {
     background: transparent;
-    float: right;
+    float: center;
     margin-top: 0px;
+    margin-bottom: 15px;
   }
   .menu a {
     font-family: 'Open Sans', sans-serif;
     background: transparent;
-    padding: 5px;
+    padding: 10px;
     color:#004AAD;
     text-decoration: none;
     display: inline;
   }
+  img {
+    width: 100%;
+    height: auto;
+    }
   table {
     width: 100%;
     border-collapse: collapse;
