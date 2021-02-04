@@ -71,10 +71,16 @@ body {
     text-align: center;
     letter-spacing: -2px;
   }
+  h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+  }
   p {
     font-family: 'Open Sans', sans-serif;
     width: auto;
-    margin: 5px auto;
     word-wrap: break-word;
   }
   .login {
@@ -117,43 +123,52 @@ body {
       text-decoration:none;
       text-shadow:0px 1px 0px #154682;
     }
+    [name='listen']{
+      box-shadow:inset 0px 1px 0px 0px #54a3f7;
+      background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+      background-color:#007dc1;
+      border-radius:3px;
+      border:1px solid #124d77;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:13px;
+      padding:6px 24px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #154682;
+    }
   /*
   * Formatting the header area
   */
   header {
+    background: transparent;
     height: 35px;
-    margin-bottom: 40px;
     width: 100%;
     opacity: 0.9;
     padding: 0px;
   }
-  header h1.logo {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    font-size: 1.7em;
-    color: #004AAD;
-    float: left;
-  }
-  header h1.logo:hover {
-    font-family: 'Open Sans', sans-serif;
-    text-decoration: none;
-  }
-  p {
-    width: auto;
-    margin: 5px auto;
-    word-wrap: break-word;
-  }
   .menu {
-    float: center;
+    background: transparent;
+    float: right;
     margin-top: 0px;
   }
   .menu a {
     font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
+    background: transparent;
+    padding: 5px;
     color:#004AAD;
     text-decoration: none;
     display: inline;
   }
-  .menu a + a {
-    margin-left: 35px;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border-bottom: 1px solid #ddd;
+  }
+  tr:hover {
+    background-color: rgba(255, 255, 255, 0.75); 
+    backdrop-filter: blur(10px);
   }

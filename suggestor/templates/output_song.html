@@ -2,18 +2,13 @@
 
     <h1>"{{ output_song }}" is a great choice!</h1>
     <h2>Here's your custom playlist.</h2>
-    <br>
-    <br>
     <table>
-        <tr>
-            <th>Track</th>
-            <th></th>
-        </tr>
+            <h3>Track</h3>
         {% for index, row in recommended_song.iterrows() %}
         <tr>
-            <td>{{ row['combined'] }}</td>
-            <td><a href="{{ row['url'] }}" class="myButton">Listen Here</a></td>
+            <td><p>{{ row['combined'] }}</p></td>
+            <td><a href="{{ row['url'] }}" class="myButton" name='listen'>Listen Here</a></td>
         </tr>
         {% endfor %}
-
+    </table>
 {% endblock %}
