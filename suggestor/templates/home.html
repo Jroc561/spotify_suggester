@@ -1,0 +1,18 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/entry.css') }}"/>
+</head>
+
+  <div class="login">
+            <img src="static/images/codasong-4.png" style="width:200px;height:200px;">
+            <h1>Hi there! Welcome to codasong.</h1>
+            <h2>Ready to find some new music?</h2>
+            <p>Let's start with your name.</p>
+              <form id='namesubmit' action="/" method="post">
+                <input autocomplete="off" autofocus name="name" placeholder="Name" type="text"></input>
+                <input name='submit' type="submit"></input>
+              </form>
+  </div>
+</html>
