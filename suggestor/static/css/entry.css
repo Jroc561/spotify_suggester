@@ -1,5 +1,4 @@
 body {
-    height: 50%;
     background-size: cover;
     background-image: url("/static/images/pexels-rahul-pandit-3052360.jpg");
     background-position: center center;
@@ -13,7 +12,6 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5em; 
     font-weight: 900;
-    margin-right: 5px;
     margin-top: 0px;
     margin-bottom: 5px;
     padding: 1px;
@@ -25,7 +23,6 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2em; 
     font-weight: lighter;
-    margin-right: 5px;
     margin-top: 0px;
     margin-bottom: 5px;
     padding: 1px;
@@ -36,8 +33,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.0em; 
     font-weight: lighter;
-    margin-right: 5px;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 0px;
     text-align: center;
     color: rgb(0, 0, 0);
@@ -50,16 +46,15 @@ body {
     text-align: center;
     margin: 50px auto;
     margin-top: 150px;
-    width: 500px;
+    max-width: 30%;
     box-shadow: 5px 5px 10px;
   }
   .namesubmit {
     margin: 50px auto;
   }
     [name='name']{
-      width: 80%;
+      max-width: 100%;
       height: 30px;
-      padding: 5px;
       margin-top: 15px;
       border:1px solid #ccc; 
       -webkit-border-radius: 5px;
@@ -67,9 +62,8 @@ body {
       border-radius: 5px; 
     }
     [name='search']{
-      width: 80%;
+      max-width: 100%;
       height: 30px;
-      padding: 5px;
       margin-top: 25px;
       background-color: #7db6a3;
       border:1px solid #ccc; 

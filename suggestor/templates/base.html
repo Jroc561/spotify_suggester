@@ -5,20 +5,24 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap');
       </style>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/style.css"/>
   </head>
 
-  <div class="login">
-    <body>
-        <header>
-            <nav class="menu"> 
-              <a href="/">Home</a>
-              <a href="/"<img src="static/images/codasong-4.png" style="width:200px; height 200px;"></a>
-              <a href="/about">About</a>
-            </nav>
-        </header>
-        {% block body %}{% endblock %}
-    </body>
+<div class="login">
+  <header>
+  <div class="logo">
+  <a href="/"><img src="static/images/codasong-4.png" style="max-width:200px;height:auto;"></a></div>
+    <nav class="menu"> 
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+  <div class="container">
+  <body>
+      {% block body %}{% endblock %}
+  </body>
+  </div>
 </div>
 </html>
