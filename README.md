@@ -1,5 +1,5 @@
 # spotify_suggester
-[Website](http://github.com)
+[Website](https://codasong.herokuapp.com)
 
 ## Description
 This app helps users to find and visualize songs that fit their personal taste. This uses a model to recommend list of songs based on a song input.
